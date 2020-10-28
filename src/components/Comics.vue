@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="columns--background">
               <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
@@ -50,12 +50,13 @@
       </div>
     </nav>
 
-    <div class="columns columns--background">
+    <div class="columns">
+      
 
       <div
         v-for="comic in comics"
         :key="comic.id"
-        class="column is-2-desktop ml-5 animate__animated animate__slideInRight"
+        class="column is-2-desktop mx-5 animate__animated animate__slideInRight"
       >
         <div class="card">
           <div class="card-image">
@@ -91,6 +92,7 @@
           </div>
         </div>
       </div>
+      <div class="column is-3 column--cloud"><span class="buy-alert">BUY THEM ALL!</span></div>
     </div>
   </div>
 </template>
@@ -147,7 +149,7 @@ export default {
         this.comicName = data.data.results["1"].title;
         this.comicImage =
           data.data.results["4"].thumbnail.path + "/portrait_fantastic.jpg";
-   //si resulto llamado a la api, pero era muy complicada, tuve que sacar una apikey y generar una clave md5       
+   //si resulto llamado a la api, pero era muy complicada, tuve que sacar una apikey y generar una clave md5, funciona pero no la use    
       });
   },
   methods: {
@@ -176,5 +178,10 @@ export default {
   background-image: url(https://i.postimg.cc/sxJFhWF2/galactus.png);
   background-repeat: no-repeat;
   background-position: right bottom;
+}
+.column--cloud{
+  background-image: url(https://i.postimg.cc/vT4fNJMF/clipart-cloud-comic-book-7.png);
+  background-size: 480px 250px;
+  background-repeat: no-repeat;
 }
 </style>
