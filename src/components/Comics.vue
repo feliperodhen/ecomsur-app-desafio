@@ -1,8 +1,8 @@
 <template>
   <div class="columns--background">
-              <div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
     <nav
       class="navbar is-black mb-6"
       role="navigation"
@@ -17,13 +17,7 @@
             class="animate__animated animate__fadeInDown"
           />
         </a>
-        
-
-
-
       </div>
-
-      
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end px-5 py-2">
@@ -45,8 +39,6 @@
     </nav>
 
     <div class="columns">
-      
-
       <div
         v-for="comic in comics"
         :key="comic.id"
@@ -86,7 +78,9 @@
           </div>
         </div>
       </div>
-      <div class="column is-3 column--cloud is-12-widescreen"><span class="buy-alert">BUY THEM ALL!</span></div>
+      <div class="column is-3 column--cloud is-12-widescreen">
+        <span class="buy-alert">BUY THEM ALL!</span>
+      </div>
     </div>
   </div>
 </template>
@@ -103,23 +97,29 @@ export default {
         {
           id: 1,
           name: "Sentry, the (Trade Paperback)",
-          description:"On the edge of alcoholism and a failed marriage, Bob Reynolds wakes up to discover his true nature. A forgotten hero, he must unravel the conspiracy to erase his memory from mankind before an evil entity returns.",
+          description:
+            "On the edge of alcoholism and a failed marriage, Bob Reynolds wakes up to discover his true nature. A forgotten hero, he must unravel the conspiracy to erase his memory from mankind before an evil entity returns.",
           quantity: 0,
-          image:"http://i.annihil.us/u/prod/marvel/i/mg/f/c0/4bc66d78f1bee/portrait_uncanny.jpg",
+          image:
+            "http://i.annihil.us/u/prod/marvel/i/mg/f/c0/4bc66d78f1bee/portrait_uncanny.jpg",
         },
         {
           id: 2,
           name: "The Marvel Universe (2004)",
-          description:"Heavy-hitting heroes unite! This Official Handbook contains in-depth bios on more than 30 of the Marvel Universe's most awesome assemblages - including the Defenders, Power Pack and the New Thunderbolts! ",
+          description:
+            "Heavy-hitting heroes unite! This Official Handbook contains in-depth bios on more than 30 of the Marvel Universe's most awesome assemblages - including the Defenders, Power Pack and the New Thunderbolts! ",
           quantity: 0,
-          image:"http://i.annihil.us/u/prod/marvel/i/mg/f/20/4bc63a47b8dcb/portrait_uncanny.jpg",
+          image:
+            "http://i.annihil.us/u/prod/marvel/i/mg/f/20/4bc63a47b8dcb/portrait_uncanny.jpg",
         },
         {
           id: 3,
           name: "Ant-Man (2003)",
-          description:"Ant-Man digs deeper into finding out who is leaking those dirty little secrets that are threatening our national security. And who's better at uncovering dirty LITTLE secrets than him??",
+          description:
+            "Ant-Man digs deeper into finding out who is leaking those dirty little secrets that are threatening our national security. And who's better at uncovering dirty LITTLE secrets than him??",
           quantity: 0,
-          image:"http://i.annihil.us/u/prod/marvel/i/mg/4/20/4bc697c680890/portrait_uncanny.jpg",
+          image:
+            "http://i.annihil.us/u/prod/marvel/i/mg/4/20/4bc697c680890/portrait_uncanny.jpg",
         },
       ],
       showCart: false,
@@ -143,7 +143,7 @@ export default {
         this.comicName = data.data.results["1"].title;
         this.comicImage =
           data.data.results["4"].thumbnail.path + "/portrait_fantastic.jpg";
-   //si resulto llamado a la api, pero era muy complicada, tuve que sacar una apikey y generar una clave md5, funciona pero no la use    
+        //si resulto llamado a la api, pero era muy complicada, tuve que sacar una apikey y generar una clave md5, funciona pero no la use
       });
   },
   methods: {
@@ -168,12 +168,12 @@ export default {
 
 
 <style scoped>
-.columns--background{
+.columns--background {
   background-image: url(https://i.postimg.cc/sxJFhWF2/galactus.png);
   background-repeat: no-repeat;
   background-position: right bottom;
 }
-.column--cloud{
+.column--cloud {
   background-image: url(https://i.postimg.cc/vT4fNJMF/clipart-cloud-comic-book-7.png);
   background-size: 480px 250px;
   background-repeat: no-repeat;
