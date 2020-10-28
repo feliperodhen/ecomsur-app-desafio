@@ -1,5 +1,8 @@
 <template>
   <div>
+              <div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
     <nav
       class="navbar is-black mb-6"
       role="navigation"
@@ -47,7 +50,8 @@
       </div>
     </nav>
 
-    <div class="columns">
+    <div class="columns columns--background">
+
       <div
         v-for="comic in comics"
         :key="comic.id"
@@ -143,7 +147,7 @@ export default {
         this.comicName = data.data.results["1"].title;
         this.comicImage =
           data.data.results["4"].thumbnail.path + "/portrait_fantastic.jpg";
-          
+   //si resulto llamado a la api, pero era muy complicada, tuve que sacar una apikey y generar una clave md5       
       });
   },
   methods: {
@@ -168,4 +172,9 @@ export default {
 
 
 <style scoped>
+.columns--background{
+  background-image: url(https://i.postimg.cc/sxJFhWF2/galactus.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 </style>
