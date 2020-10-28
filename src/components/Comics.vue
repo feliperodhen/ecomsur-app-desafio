@@ -92,7 +92,7 @@
           </div>
         </div>
       </div>
-      <div class="column is-3 column--cloud"><span class="buy-alert">BUY THEM ALL!</span></div>
+      <div class="column is-3 column--cloud is-12-widescreen"><span class="buy-alert">BUY THEM ALL!</span></div>
     </div>
   </div>
 </template>

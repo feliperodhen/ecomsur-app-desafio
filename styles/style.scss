@@ -213,3 +213,37 @@ html {
 						8px 8px #EC1D24,
 						20px 20px #000000;
 }
+
+@media (max-height: 800px) {
+  .buy-alert{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -420%);
+    font-size:40px;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: yellow;
+    text-shadow: 
+              8px 8px #EC1D24,
+              20px 20px #000000;
+  }
+}
+
+@media (min-height: 820px) and (max-height:900px) {
+  .buy-alert{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -500%);
+    font-size:40px;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: yellow;
+    text-shadow: 
+              8px 8px #EC1D24,
+              20px 20px #000000;
+  }
+}
